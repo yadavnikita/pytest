@@ -1,0 +1,10 @@
+INFO:root:set the uut to desired channel
+INFO:root:set band to BGN
+INFO:root:check uut band
+INFO:root:uut is set to desired band
+INFO:root:set bandwith of uut to 20mhz
+INFO:root:uut is set to desired bandwidth
+INFO:root:set security to wpa2
+INFO:root:uut is set to correct security
+INFO:root:do passive scanning
+INFO:root:uut is connected to EX-AP1

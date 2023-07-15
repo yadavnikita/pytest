@@ -1,0 +1,21 @@
+{
+    "CONFIGURATION": {
+        "testbed-1": {
+            "Unit_under_test": [
+                {
+                    "model": "Nxp",
+                    "mode": "wifi5",
+                    "serial": "c44bd1005b30",
+                    "ip": "10.28.3.100",
+                    "username": "admin",
+                    "password": "pumpkin77",
+                    "port": 22,
+                    "access_mode": "ssh",
+                    "jumphost_tty": "/dev/ttyAP8",
+                    "version": "5.4"
+
+                }
+            ]
+        }
+    }
+}
