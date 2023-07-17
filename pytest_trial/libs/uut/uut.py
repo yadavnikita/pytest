@@ -16,8 +16,9 @@ class UnitUnderTest:
     def set_uut_security(self, sec):
         print(f"set uut to {sec} security")
 
-    def check_uut_band(self):
+    def check_uut_band(self, cli):
         print("send cli to uut for checking uut band")
+        print("your command ", cli)
         band = "bgn"
         return band
 

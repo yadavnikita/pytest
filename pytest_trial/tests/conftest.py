@@ -42,6 +42,9 @@ def pytest_addoption(parser):
                      help="provide uut channel")
     parser.addoption("--ex_ap_ssid",
                      help="provide ex ap ssid")
+    parser.addoption("--cli_check_uut_band",
+                     default="ifconfig",
+                     help="check uut band cli")
 
 
 
@@ -55,6 +58,12 @@ def testbed(request):
 def channel(request):
     var = request.config.getoption("--channel")
     allure.attach(name="UUT Channel", body=var)
+    yield var
+
+@pytest.fixture(scope="session")
+def cli_check_uut_band(request):
+    var = request.config.getoption("--cli_check_uut_band")
+    allure.attach(name="check uut band cli", body=var)
     yield var
 
 @pytest.fixture(scope="session")

@@ -54,12 +54,12 @@ class TestUutFuncSetBand(object):
             assert False
 
     @pytest.mark.wifi_uut_band_bgn
-    def test_set_band_bgn(self, testbed, instantiate_profile):
+    def test_set_band_bgn(self, instantiate_profile, cli_check_uut_band):
         print("set band to BGN")
         instantiate_profile.set_uut_band(band="bgn")
         print("check uut band")
         logging.info("check uut band")
-        band = instantiate_profile.check_uut_band()
+        band = instantiate_profile.check_uut_band(cli=cli_check_uut_band)
         if band == "bgn":
             logging.info("uut is set to desired band")
         else:
